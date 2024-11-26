@@ -1,0 +1,22 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #8")
+
+# Lista de nombres
+nombres = ["Ana", "Pedro", "Alberto", "María", "Antonio", "Carlos", "Agustina", "Elena", "Alma", "Juan"]
+
+# Solicitar al usuario que ingrese una letra para buscar
+letra = input("¡Bienvenido! Elige una letra para ver cuántos nombres comienzan con ella: ").strip().upper()
+
+# Validar la entrada del usuario
+if len(letra) == 1 and letra.isalpha():
+    # Filtrar y contar los nombres que empiezan con la letra seleccionada
+    nombres_filtrados = [nombre for nombre in nombres if nombre.startswith(letra)]
+    
+    # Mostrar el resultado
+    if nombres_filtrados:
+        print(f"¡Sorpresa! Hay {len(nombres_filtrados)} nombre(s) que comienzan con la letra '{letra}': {', '.join(nombres_filtrados)}.")
+    else:
+        print(f"¡Vaya! No hay nombres que empiecen con la letra '{letra}'. Intenta con otra letra.")
+else:
+    print("Por favor, ingresa una letra válida.")
