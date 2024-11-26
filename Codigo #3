@@ -1,0 +1,22 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #7")
+
+#Función para filtrar palabras con más de n caracteres
+def filtrar_palabras(lista_palabras, n):
+    filtradas = filter(lambda palabra: len(palabra) > n, lista_palabras)
+    return list(filtradas)
+
+#Solicitar al usuario una lista de palabras separadas por comas
+entrada = input("Ingrese una lista de palabras separadas por comas: ").strip()
+palabras = [palabra.strip() for palabra in entrada.split(",")]
+
+#Solicitar un número entero para el filtro
+n = int(input("Ingrese el número mínimo de caracteres: "))
+
+#Filtrar palabras y mostrar el resultado
+resultado = filtrar_palabras(palabras, n)
+if resultado:
+    print(f"Palabras con más de {n} caracteres: {', '.join(resultado)}")
+else:
+    print(f"No hay palabras con más de {n} caracteres.")
