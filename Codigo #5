@@ -1,0 +1,17 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #7")
+
+def convertir_binario_a_entero(binario):
+    """Convierte una cadena binaria a entero si es válida, o devuelve None."""
+    return int(binario, 2) if binario.isdigit() and set(binario) <= {"0", "1"} else None
+
+# Solicitar al usuario un número binario
+binario = input("Ingrese un número binario: ").strip()
+
+# Validar y convertir
+entero = convertir_binario_a_entero(binario)
+if entero is not None:
+    print(f"El número binario {binario} convertido a entero es: {entero}")
+else:
+    print("Entrada inválida. Por favor, ingrese un número binario válido (solo 0 y 1).")
