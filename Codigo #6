@@ -1,0 +1,25 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #7")
+
+# Solicitar el año en curso
+año_actual = int(input("Ingrese el año en curso: "))
+
+# Ingresar y procesar los datos de tres personas
+for i in range(1, 4):
+    nombre = input(f"Ingrese el nombre de la persona {i}: ")
+    
+    # Solicitar y validar el año de nacimiento
+    while True:
+        try:
+            año_nacimiento = int(input(f"Ingrese el año de nacimiento de {nombre}: "))
+            if año_nacimiento <= año_actual:
+                break
+            else:
+                print("El año de nacimiento no puede ser mayor que el año actual.")
+        except ValueError:
+            print("Por favor, ingrese un año válido.")
+    
+    # Calcular y mostrar la edad
+    edad = año_actual - año_nacimiento
+    print(f"{nombre} cumplirá {edad} años en el año {año_actual}.")
