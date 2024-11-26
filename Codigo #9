@@ -1,0 +1,15 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #9")
+
+# Función para contar las vocales en una palabra
+def contar_vocales(palabra):
+    return {vocal: palabra.lower().count(vocal) for vocal in 'aeiou'}
+
+# Solicitar al usuario que ingrese una palabra
+palabra = input("Ingrese una palabra para contar las vocales: ").strip()
+
+# Llamar a la función y mostrar el resultado
+for vocal, cantidad in contar_vocales(palabra).items():
+    if cantidad > 0:
+        print(f"La letra '{vocal}' aparece {cantidad} vez/veces.")
