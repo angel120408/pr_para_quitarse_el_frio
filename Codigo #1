@@ -1,0 +1,15 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #7")
+
+# Función para encontrar el número más grande en una lista
+def max_in_list(numeros):
+    mayor = max(numeros)
+    return mayor
+
+# Solicitar al usuario ingresar números separados por comas
+entrada = input("Ingrese una lista de números separados por comas: ")
+numeros = [float(num.strip()) for num in entrada.split(",")]
+
+# Llamar a la función y mostrar el número más grande
+print(f"El número más grande en la lista es: {max_in_list(numeros)}")
