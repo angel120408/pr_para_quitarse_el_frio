@@ -1,0 +1,18 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #7")
+
+# Solicitar las edades al usuario
+edades = []
+for i in range(10):
+    edad = int(input(f"Ingrese la edad de la persona {i+1}: "))
+    edades.append(edad)
+
+# Convertir la lista a tupla
+edades = tuple(edades)
+
+# Contar las personas con edades superiores a 20
+mayores_de_20 = sum(1 for edad in edades if edad > 20)
+
+# Imprimir el resultado
+print(f"Cantidad de personas con edades superiores a 20: {mayores_de_20}")
