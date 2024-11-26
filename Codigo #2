@@ -1,0 +1,17 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #7")
+
+#Función para encontrar la palabra más larga en una lista
+def mas_larga(lista_palabras):
+    return sorted(lista_palabras, key=len, reverse=True)[0]
+
+#Solicitar al usuario una lista de palabras separadas por comas
+entrada = input("Ingrese una lista de palabras separadas por comas: ").strip()
+palabras = [palabra.strip() for palabra in entrada.split(",")]
+
+#Nos verificar que la lista no esté vacía
+if palabras:
+    print(f"La palabra más larga es: {mas_larga(palabras)}")
+else:
+    print("No ingresó palabras válidas.")
