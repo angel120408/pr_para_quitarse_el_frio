@@ -1,0 +1,18 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #10")
+
+def es_bisiesto(año):
+    # Un año es bisiesto si es divisible por 4, pero no por 100, a menos que sea divisible por 400
+    return (año % 4 == 0 and (año % 100 != 0 or año % 400 == 0))
+
+# Solicitar y validar el año
+while True:
+    try:
+        año = int(input("Ingrese un año para verificar si es bisiesto: "))
+        break  # Si la entrada es válida, salimos del bucle
+    except ValueError:
+        print("Por favor, ingrese un año válido.")
+
+# Verificar si es bisiesto
+print(f"El año {año} {'es' if es_bisiesto(año) else 'no es'} bisiesto.")
